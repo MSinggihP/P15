@@ -1,0 +1,50 @@
+l#include <iostream>
+using namespace std;
+
+struct mahasiswa{
+    int nim;
+    char nama[100];
+    int tlp;
+    float tugas;
+    float uts;
+    float uas;
+    float quiz;
+};
+mahasiswa mod;
+
+void input(){
+    cout<<"NIM  : ";
+    cin>>mod.nim;
+    cout<<"Nama : ";
+    cin>>mod.nama;
+    cout<<"No. Telp : ";
+    cin>>mod.tlp;
+    cout<<"Nilai Tugas :";
+    cin>>mod.tugas;
+    cout<<"Nilai UTS   :";
+    cin>>mod.uts;
+    cout<<"Nilai UAS   :";
+    cin>>mod.uas;
+    cout<<"Nilai Quiz  :";
+    cin>>mod.quiz;
+}
+void output(){
+    cout<<endl;
+    cout<<"NIM  : "<<mod.nim<<endl;
+    cout<<"Nama : "<<mod.nama<<endl;
+    cout<<"No. Telp : "<<mod.tlp<<endl;
+    cout<<"Tugas    : "<<mod.tugas<<endl;
+    cout<<"UTS      : "<<mod.uts<<endl;
+    cout<<"UAS      : "<<mod.uas<<endl;
+    cout<<"Quiz     : "<<mod.quiz<<endl;
+    float hasil;
+    hasil=(0.25*mod.uas)+(0.25*mod.uts)+(0.3*mod.tugas)+(0.2*mod.quiz);
+    cout<<"Hasil Akhir = "<<hasil;
+}
+
+int main()
+{
+    input();
+    output();
+    return 0;
+}
