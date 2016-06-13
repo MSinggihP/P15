@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+struct buah{
+    char buah[20];
+    int harga;
+    int total;
+};
+buah stock[5];
+
+void masukin(){
+    int i;
+    for(i=1;i<5;i++){
+        cout<<"No : "<<i<<endl;
+        cout<<"Nama Buah : ";cin>>stock[i].buah;
+        cout<<"Harga/Kg  : ";cin>>stock[i].harga;
+        cout<<"Total     : ";cin>>stock[i].total;
+        system("cls");
+    }
+    system("cls");
+}
+void out(){
+    int i;
+    for(i=1;i<5;i++){
+        cout<<i<<" | "<<stock[i].buah<<" | "<<stock[i].harga<<" | "<<stock[i].total<<endl;
+    }
+}
+
+int main()
+{
+    masukin();
+    out();
+    return 0;
+}
